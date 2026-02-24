@@ -1,0 +1,49 @@
+// app.js
+
+// JavaScript functionality for car listings
+
+// Sample data for car listings
+const cars = [
+    { id: 1, name: 'Ford Mustang', image: 'mustang.jpg', price: 55000 },
+    { id: 2, name: 'Chevrolet Camaro', image: 'camaro.jpg', price: 45000 },
+    { id: 3, name: 'Tesla Model S', image: 'tesla.jpg', price: 75000 },
+];
+
+// Function to display car listings
+function displayCars(carArray) {
+    const carContainer = document.getElementById('car-list');
+    carContainer.innerHTML = '';
+    carArray.forEach(car => {
+        const carElement = document.createElement('div');
+        carElement.classList.add('car-item');
+        carElement.innerHTML = `<h3>${car.name}</h3>\n        <img src='${car.image}' alt='${car.name}' />\n        <p>Price: $${car.price}</p>`;
+        carContainer.appendChild(carElement);
+    });
+}
+
+displayCars(cars);
+
+// Funcitonality for search filter
+const searchInput = document.getElementById('search-bar');
+searchInput.addEventListener('input', function() {
+    const filteredCars = cars.filter(car => car.name.toLowerCase().includes(searchInput.value.toLowerCase()));
+    displayCars(filteredCars);
+});
+
+// Image gallery functionality
+const galleryImages = document.querySelectorAll('.gallery img');
+const mainImage = document.getElementById('main-image');
+
+galleryImages.forEach(img => {
+    img.addEventListener('click', function() {
+        mainImage.src = img.src;
+    });
+});
+
+// Contact form functionality
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form submitted!');
+});
+

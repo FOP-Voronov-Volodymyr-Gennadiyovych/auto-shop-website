@@ -7,6 +7,6 @@
   mileage: 85000,
   fuel: "diesel",
   color: "black",
-  images: ["images/foto_bmw.jpg", "images/foto_bmw.jpg"], // Add your photos
+  images: ["images/car1.jpg", "images/car1.jpg"], // Add your photos
   description: "Well maintained..."
 }

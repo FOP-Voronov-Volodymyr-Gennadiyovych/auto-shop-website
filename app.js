@@ -4,7 +4,7 @@
 
 // Sample data for car listings
 const cars = [
-    { id: 1, name: 'BMW', image: 'car1.jpg', price: 5500}
+    { id: 1, name: 'BMW', image: 'images/car1.jpg', price: 5500}
 ];
 
 // Function to display car listings

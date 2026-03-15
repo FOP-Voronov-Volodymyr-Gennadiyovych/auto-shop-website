@@ -10,7 +10,7 @@ const cars = [
 // Function to display car listings
 function displayCars(carArray) {
     const carContainer = document.getElementById('carListings');
-    carContainer.innerHTML = 'opa';
+    carContainer.innerHTML = '';
     carArray.forEach(car => {
         const carElement = document.createElement('div');
         carElement.classList.add('car-item');

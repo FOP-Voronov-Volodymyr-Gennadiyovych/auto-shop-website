@@ -22,7 +22,7 @@ function displayCars(carArray) {
 displayCars(cars);
 
 // Funcitonality for search filter
-const searchInput = document.getElementById('search-bar');
+const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', function() {
     const filteredCars = cars.filter(car => car.name.toLowerCase().includes(searchInput.value.toLowerCase()));
     displayCars(filteredCars);
